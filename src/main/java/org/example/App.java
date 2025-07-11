@@ -13,6 +13,9 @@ public class App {
                 new VulnerabilityScript(6, List.of(10)),
                 new VulnerabilityScript(9, List.of()));
 
+        startApp(scripts);
+    }
+    public static void startApp(List<VulnerabilityScript> scripts){
         if (ScriptValidator.validateScripts(scripts)) {
             List<List<Integer>> waves = ScriptWavesService.validateScripts(scripts);
             ScriptWavesService.showStatistic(waves);
